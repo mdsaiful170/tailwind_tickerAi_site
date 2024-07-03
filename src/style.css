@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply !scroll-smooth scroll-mt-7;
+  }
+  body {
+    @apply dark:text-whiteColor dark:bg-DarkbodyColor text-grayDark bg-whiteColor 
+        overflow-x-hidden font-league box-border;
+  }
+  html::-webkit-scrollbar{
+    @apply w-[1rem]
+  }
+  html::-webkit-scrollbar-track{
+    @apply bg-transparent
+  }
+  html::-webkit-scrollbar-thumb{
+    @apply bg-blue rounded-full;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-3 py-1 md:px-4 inline-block text-nowrap lg:px-7 md:py-3 bg-blue text-[12px]  md:text-base font-semibold rounded-md text-whiteColor;
+  }
+  .card-img {
+    @apply w-full h-48 object-cover  md:w-[180px] md:h-60 lg:w-[160px] lg:h-52 border dark:border-blue rounded;
+  }
+  .all-caption {
+    @apply *:text-base *:lg:text-lg *:px-[6px] *:pt-[4px] *:uppercase *:bg-grayDark text-white;
+  }
+  .card_container {
+    @apply flex flex-col transition-all mt-6 hover:scale-105 cursor-pointer duration-300 md:flex-row gap-5 lg:gap-6 items-center border border-borderColor dark:border-borderColor/50 p-2 md:p-4;
+  }
+  .tag-btn{
+    @apply font-normal text-base lg:text-[18px] px-[6px] py-[3px] uppercase text-black  bg-blue/25 dark:text-whiteColor dark:bg-blue/50 relative duration-300 z-50 hover:text-whiteColor dark:hover:text-DarkbodyColor text-center ;
+  }
+  .tag-btn::before{
+    @apply content-[''] absolute top-0 right-0 left-0  w-[100%] h-[100%] inset-0 scale-x-0 transition-transform origin-right bg-grayDark dark:bg-whiteColor  duration-500 transform -z-10 ;
+  }
+  .tag-btn:hover::before{
+    @apply scale-x-100 origin-left  ;
+  }
+
+  .dborder{
+    @apply border border-red-800;
+  }
+  .form-tag{
+    @apply *:font-semibold *:text-lg   *:bg-[#E6EBF3] *:rounded-full *:mb-[17px] *:block *:text-center *:text-grayDark *:py-4;
+  }
+  .form-tag a  {
+    @apply transition-all transform hover:scale-105 tracking-[.1rem] duration-300; 
+  }
+}
