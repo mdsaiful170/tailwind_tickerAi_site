@@ -1,41 +1,53 @@
 // ~~~~~~~~~~~~~~~~~ Dark mode on of section ~~~~~~~~~~~~~~~~~~~~~~~ //
 
-const html = document.querySelector("html");
-const themeBtn = document.getElementById("theme_btn");
+// vite diye local sotrage js code netlif a link korle dark mode kaj kore na keno? but localhosst vite a dark mode kaj kore
 
 
-let currentMode = localStorage.getItem("mode");
+// const html = document.querySelector("html");
+// const themeBtn = document.getElementById("theme_btn");
 
 
-if (currentMode === "dark") {
-  darkMode();
-} else {
-  lightMode();
-}
+// let currentMode = localStorage.getItem("mode");
 
 
-themeBtn.addEventListener('click', (e) => {
-  if (currentMode === "dark") {
-    lightMode();
-    currentMode = "light";
-  } else {
-    darkMode();
-    currentMode = "dark";
-  }
-  localStorage.setItem("mode", currentMode);
-})
+// if (currentMode === "dark") {
+//   darkMode();
+// } else {
+//   lightMode();
+// }
 
 
-function darkMode() {
-  html.classList.add("dark");
-  themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
-}
+// themeBtn.addEventListener('click', (e) => {
+//   if (currentMode === "dark") {
+//     lightMode();
+//     currentMode = "light";
+//   } else {
+//     darkMode();
+//     currentMode = "dark";
+//   }
+//   localStorage.setItem("mode", currentMode);
+// })
 
 
-function lightMode() {
-  html.classList.remove("dark");
-  themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
-}
+// function darkMode() {
+//   html.classList.add("dark");
+//   themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
+// }
+
+
+// function lightMode() {
+//   html.classList.remove("dark");
+//   themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
+// }
+
+ const html = document.querySelector("html");
+ const themeBtn = document.getElementById("theme_btn");
+
+ themeBtn.addEventListener('click' , () =>{
+  themeBtn.classList.toggle("ri-sun-line");
+  html.classList.toggle('dark');
+ })
+
 
 
 // ~~~~~~~~~~~~~~~~~ scroll up section ~~~~~~~~~~~~~~~~~~~~~~~ //
