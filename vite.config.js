@@ -7,7 +7,6 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         news: resolve(__dirname, "news.html"),
-        dark: resolve(__dirname, "#theme_btn"),
       },
     },
   },
